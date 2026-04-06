@@ -42,5 +42,5 @@ const handleScroll = () => {
 
 window.addEventListener("scroll", handleScroll);
 
-timerId = setTimeout(openModalOnce, 5000);
+timerId = setTimeout(openModalOnce, 10000);
 openBtn.addEventListener("click", openModal);
