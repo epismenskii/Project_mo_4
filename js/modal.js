@@ -6,7 +6,7 @@ let modalOpened = false;
 let timerId = null;
 
 const openModal = () => {
-    if (modal.style.display === "block") return; // уже открыта
+    if (modal.style.display === "block") return; 
     modal.style.display = "block";
     document.body.style.overflow = "hidden";
 };
