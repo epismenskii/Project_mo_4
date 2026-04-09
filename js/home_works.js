@@ -68,3 +68,41 @@ resetBtn.addEventListener('click', () => {
     seconds = 0;
     timeElement.textContent = 0;
 })
+
+// 4th homework
+
+const aboutMe = new XMLHttpRequest();
+aboutMe.open("GET", "../data/bio.json");
+aboutMe.setRequestHeader("Content-Type", "application/json");
+aboutMe.send()
+aboutMe.onload = () => {
+    console.log(aboutMe.response);
+}
+
+const DEFAULT_IMG = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+
+const actCards = document.querySelector(".characters-list")
+
+const actors = new XMLHttpRequest();
+actors.open("GET", "../data/characters.json");
+actors.setRequestHeader("Content-Type", "application/json");
+actors.send()
+actors.onload = () => {
+    
+    const parsing = JSON.parse(actors.response)
+
+    parsing.forEach((actor) => {
+        const card = document.createElement("div");
+        card.classList.add("character-card");
+        card.innerHTML = 
+        `<div class = "character-photo"> 
+            <img src="${actor.photo ?? DEFAULT_IMG}" alt="${actor.name}">
+        </div>
+        <p class = "character-name">${actor.name}</p>
+        <p class = "character-age">Age: ${actor.age}</p>
+        `
+        actCards.appendChild(card);
+        
+    })
+    
+}

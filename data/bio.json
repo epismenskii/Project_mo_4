@@ -1,0 +1,7 @@
+{
+    "name": "Eduard",
+    "age": "24",
+    "gender": "male",
+    "city": "Bishkek",
+    "hobbies": ["hiking", "trevel", "run"]
+}

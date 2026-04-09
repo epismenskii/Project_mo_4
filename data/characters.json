@@ -1,17 +1,42 @@
 [
   {
-    "name": "",
-    "age": 0,
-    "photo": "url"
+    "name": "Gillian Anderson",
+    "age": 57,
+    "photo": "https://avatars.mds.yandex.net/get-kinopoisk-image/10671298/f24a071f-fbe8-4f1b-a3e9-f1d06b3725a6/600x900"
   },
   {
-    "name": "",
-    "age": 0,
-    "photo": "url"
+    "name": "Frances McDormand",
+    "age": 68,
+    "photo": "https://avatars.mds.yandex.net/get-kinopoisk-image/10768063/57bf17cf-f261-48c3-a935-4dcdc548a7dc/600x900"
   },
   {
-    "name": "",
-    "age": 0,
-    "photo": "url"
+    "name": "Matthew McConaughey",
+    "age": 56,
+    "photo": "https://avatars.mds.yandex.net/get-kinopoisk-image/4486362/be291c0e-1a00-4506-b07c-3c3079ef977e/600x900"
+  },
+  {
+    "name": "Rhea Seehorn",
+    "age": 53,
+    "photo": "https://avatars.mds.yandex.net/get-kinopoisk-image/10953618/590044e3-629a-47e3-b1da-959321d6b0cb/600x900"
+  },
+  {
+    "name": "Bob Odenkirk",
+    "age": 63,
+    "photo": "https://avatars.mds.yandex.net/get-kinopoisk-image/4486362/bd1d981f-e8b1-4166-bf76-fba478ec2b6e/600x900"
+  },
+  {
+    "name": "Kyle MacLachlan",
+    "age": "67",
+    "photo": "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/9602d81c-5a20-41a7-9b6e-813a0f7bef8c/600x900"
+  },
+  {
+    "name": "Meryl Streep",
+    "age": "76",
+    "photo": "https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/9473c8fa-d5e2-4c10-b029-fbafe2c22f6b/600x900"
+  },
+  {
+    "name": "Uma Thurman",
+    "age": "55",
+    "photo": "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/5211ae36-0998-49ce-b8ea-ef6d6b353478/600x900"
   }
 ]

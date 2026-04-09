@@ -2,7 +2,11 @@ const tabBlock = document.querySelectorAll(".tab_content_block");
 const tabs = document.querySelectorAll(".tab_content_item");
 const tabItems = document.querySelector(".tab_content_items");
 
+let currentIndex = 0;
+let seconds = null;
+
 const toggleBlock = (index = 0) => {
+    currentIndex = index;
     tabBlock.forEach((block, i) => block.classList.toggle("active", i === index));
     tabs.forEach((tab, i) => tab.classList.toggle("active", i === index));
 }
@@ -18,9 +22,6 @@ tabItems.addEventListener("click", (event) => {
     
 })
 
-let currentIndex = 0;
-let seconds = null;
-
 const slider = () => {
    seconds = setInterval(() => {
     currentIndex++
@@ -32,4 +33,3 @@ const slider = () => {
 }
 
 slider()
-
