@@ -83,3 +83,50 @@ const converter = (element, usdElement, eurElement) => {
 converter(somInput, usdInput, euroInput)
 converter(usdInput, somInput, euroInput)
 converter(euroInput, somInput, usdInput)
+
+// Дз 6: 
+
+const nextBtn = document.querySelector("#btn-next")
+const prevBtn = document.querySelector("#btn-prev")
+const cardWindow = document.querySelector(".card")
+
+let numCard = 1;
+
+
+const card = () => {
+    fetch(`https://jsonplaceholder.typicode.com/todos/${numCard}`)
+        .then(response => response.json())
+        .then(({id, title, completed}) => {
+        const color = completed ? 'green' : 'red'
+        cardWindow.style.borderColor = color
+    cardWindow.innerHTML = `
+    <p> ID: ${id} </p>
+    <p> ${title} </p>
+    <p style = ' color:${color}'> ${completed ? "Выполнен" : "В процессе"} </p>
+    `
+    })}
+    
+card()
+
+nextBtn.addEventListener('click', () => {
+    numCard++;
+    if(numCard > 200){
+        numCard = 1;
+    }
+    card()
+})
+prevBtn.addEventListener('click', () => {
+    numCard--;
+    if(numCard < 1){
+        numCard = 200
+    }
+    card()
+})
+
+fetch('https://jsonplaceholder.typicode.com/albums')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(({id, title}) => {
+      console.log(`ID: ${id}, Title: ${title}`);
+    });
+  });
