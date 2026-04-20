@@ -1,0 +1,25 @@
+.cards {
+  display: grid;
+  margin: 100px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  padding: 15px;
+  border-radius: 10px;
+  background: #474747;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+h3 {
+    margin: 10px auto;
+    font-size: 16px;
+}
+p{
+    color: #fff;
+}

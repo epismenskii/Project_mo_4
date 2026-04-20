@@ -130,3 +130,32 @@ fetch('https://jsonplaceholder.typicode.com/albums')
       console.log(`ID: ${id}, Title: ${title}`);
     });
   });
+
+  const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
+  const API_KEY = '83b3ebd39b878f8be8acd104821aa61a'
+
+  const cityInput = document.querySelector('.cityName')
+  const searchBtn = document.querySelector('#search')
+  const cityName = document.querySelector('.city')
+  const tempText = document.querySelector('.temp')
+  
+  searchBtn.addEventListener('click', async() => {
+    try{
+        if(cityInput.value != ''){
+            const response = await fetch(`${BASE_URL}?q=${cityInput.value}&appid=${API_KEY}&units=metric`);
+            const data = await response.json();
+            const {name, main:{temp}} = data;
+            cityName.innerHTML = name;
+            tempText.innerHTML = temp + ' Градусов'
+        }
+        else{
+            cityName.innerHTML = 'Укажите город'
+            tempText.innerHTML = '';
+        }
+    }
+    catch(error){
+        console.log(error);
+        cityName.innerHTML = `Произошла ошибка на сервере`
+        tempText.innerHTML = "";
+    }
+  })
